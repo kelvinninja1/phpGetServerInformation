@@ -11,7 +11,7 @@ class serverInfo {
   	return round(($load * 100) / $coreCount,2);
   }
   // Note: you can use the next function to pass the number of system cores to this function.
-  //
+
   // Get the number of system cores
   // This function returns the number of system cores:
 
@@ -111,8 +111,7 @@ class serverInfo {
   }
   // Get the kernel version
   // This function returns the kernel version:
-  //
-  // PHP
+
   function shapeSpace_kernel_version() {
 
   	$kernel = explode(' ', file_get_contents('/proc/version'));
