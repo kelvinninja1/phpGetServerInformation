@@ -87,6 +87,24 @@ class serverInfo {
   	return $memory_usage;
 
   }
+
+  // Get server memory Free
+  // This function returns the server memory free as a percentage:
+
+  function shapeSpace_server_memory_free() {
+
+  	$free = shell_exec('free');
+  	$free = (string)trim($free);
+  	$free_arr = explode("\n", $free);
+  	$mem = explode(" ", $free_arr[1]);
+  	$mem = array_filter($mem);
+  	$mem = array_merge($mem);
+  	$memory_usage = $mem[2] / $mem[1] * 100;
+
+  	return $free;
+
+  }
+
   // Get current disk usage
   // This function returns the amount of disk usage as a percentage:
 
