@@ -101,7 +101,7 @@ class serverInfo {
   	$mem = array_merge($mem);
   	$memory_usage = $mem[2] / $mem[1] * 100;
 
-  	return $free;
+  	return $mem;
 
   }
 
